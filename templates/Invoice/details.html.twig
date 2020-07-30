@@ -1,0 +1,45 @@
+{% extends 'base.html.twig' %}
+ {% block stylesheets %}
+
+ {% endblock %}
+
+{% block body %}
+
+    <h1>Invoice Details List:</h1>
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th scope="col">Product Name</th>
+            <th scope="col">Net Price</th>
+            <th scope="col">Gross Price</th>
+            <th scope="col">VAT %</th>
+            <th scope="col">Quantity</th>
+            <th scope="col">Unit Price</th>
+            <th scope="col">Action</th>
+        </tr>
+        </thead>
+        <tbody><
+        {% for detailsInvoices in detailsInvoices %}
+            <tr>
+                <td>{{ detailsInvoices.nameProduct }}</td>
+                <td>{{ detailsInvoices.priceNetto }}</td>
+                <td>{{ detailsInvoices.priceBrutto }}</td>
+                <td>{{ detailsInvoices.vat }}</td>
+                <td>{{ detailsInvoices.quantity }}</td>
+                <td>{{ detailsInvoices.unitPrice }}</td>
+                <td>
+                    <div class="btn-group" role="group" aria-label="Basic example">
+                        <a class="btn btn-secondary btn-danger" type="button"
+                           href="" role="button">Delete</a>
+                    </div>
+                </td>
+            </tr>
+        {% else %}
+            <div class="alert alert-danger" role="alert">
+                <h2>No invoice details to day!! Add New !! <i class="fas fa-smile-wink"></i></h2>
+            </div>
+        {% endfor %}
+        </tbody>
+    </table>
+    <a class="btn btn-secondary btn-info" role="button" href="{{ path('product_invoice_add', {'id': invoiceId.id}) }}" style="color: white">Add Product</a>
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="col-lg-6">
+        <h1>Edit Invoice Form: </h1>
+        {% for label, messages in app.flashes %}
+            {% for message in messages %}
+                <div class="alert alert-success" role="alert" style="text-align: center">
+                    <h4>{{ message }} <i class="fas fa-smile-wink"></i></h4>
+                </div>
+            {% endfor %}
+        {% endfor %}
+        <hr>
+        {{ form(formEditInvoice) }}
+
+    </div>
+{% endblock %}

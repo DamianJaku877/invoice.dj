@@ -1,0 +1,60 @@
+{% extends 'base.html.twig' %}
+ {% block stylesheets %}
+    <style>
+
+    </style>
+ {% endblock %}
+{% block body %}
+    <h1>Invoice List: </h1>
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th scope="col">Invoice Number</th>
+            <th scope="col">Name</th>
+            <th scope="col">Surname</th>
+            <th scope="col">Company Name</th>
+            <th scope="col">Address</th>
+            <th scope="col">NIP/PESEL</th>
+            <th scope="col">Order Date</th>
+            <th scope="col">Implementation Date</th>
+            <th scope="col">Net Price</th>
+            <th scope="col">Gross Price</th>
+            <th scope="col">Tax Value</th>
+            <th>Action</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for invoices in invoice_list %}
+            {% if invoices.deleted != 1 %}
+            <tr>
+                <td><a href="{{ url('details_invoice', {"id":invoices.id}) }}"
+                       style="color: blue">{{ invoices.numberInvoice }}</a></td>
+                <td>{{ invoices.name }}</td>
+                <td>{{ invoices.surname }}</td>
+                <td>{{ invoices.companyName }}</td>
+                <td>{{ invoices.address }}</td>
+                <td>{{ invoices.nip }}</td>
+                <td>{{ invoices.orderAt | date('Y-m-d') }}</td>
+                <td>{{ invoices.implementationAt | date('Y-m-d') }}</td>
+                <td>{{ invoices.sumNetto }}</td>
+                <td>{{ invoices.sumBrutto }}</td>
+                <td>{{ invoices.taxValue }}</td>
+                <td>
+                    <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
+                        <a  class="btn btn-secondary btn-danger"  type="button"
+                           href="{{ path('invoice_delete', {"id":invoices.id}) }}" role="button">Delete</a>
+                        <a class="btn btn-secondary btn-warning" role="button" href="{{ path('invoice_edit', {'id': invoices.id}) }}" style="color: white;">Edit</a>
+                        <a class="btn btn-secondary btn-info" role="button" href="{{ path('product_invoice_add', {'id': invoices.id}) }}" style="color: white">Add Product</a>
+                        <a class="btn btn-secondary btn-success" role="button" href="">Print</a>
+                    </div>
+                </td>
+            </tr>
+            {% endif %}
+        {% else %}
+            <div class="alert alert-danger" role="alert" style="text-align: center">
+                <h2>No active invoices to day!! Add New!! <i class="fas fa-smile-wink"></i></h2>
+            </div>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

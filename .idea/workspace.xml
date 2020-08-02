@@ -2,15 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f4f5959b-fe85-4862-85a1-04031378e043" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/invoice.io.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/invoice.io.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/InvoiceController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/InvoiceController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/InvoiceDetailsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/InvoiceDetailsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/InvoiceDetails.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/InvoiceDetails.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Repository/InvoiceDetailsRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/InvoiceDetailsRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/InvoiceRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/InvoiceRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Service/PriceCounterService.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/PriceCounterService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Invoice/details.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Invoice/details.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Invoice/invoiceList.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Invoice/invoiceList.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -129,6 +130,10 @@
       <path value="$PROJECT_DIR$/vendor/doctrine/data-fixtures" />
       <path value="$PROJECT_DIR$/vendor/doctrine/doctrine-fixtures-bundle" />
       <path value="$PROJECT_DIR$/vendor/twbs/bootstrap" />
+      <path value="$PROJECT_DIR$/vendor/knplabs/knp-snappy-bundle" />
+      <path value="$PROJECT_DIR$/vendor/knplabs/knp-snappy" />
+      <path value="$PROJECT_DIR$/vendor/knplabs/knp-components" />
+      <path value="$PROJECT_DIR$/vendor/knplabs/knp-paginator-bundle" />
     </include_path>
   </component>
   <component name="ProjectId" id="1fJFswRr2WUSrgE44DnzfBiK5C9" />
@@ -142,7 +147,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/assets/fontawesome" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../invoice.dj" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.stylelint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -157,12 +162,12 @@
     <property name="settings.editor.selected.configurable" value="copyright" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/public/assets/bootstrap" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/public/assets/fontawesome" />
       <recent name="$PROJECT_DIR$/public/assets" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public/assets/bootstrap" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -180,7 +185,8 @@
       <workItem from="1596100505496" duration="27842000" />
       <workItem from="1596182980894" duration="3753000" />
       <workItem from="1596191133128" duration="1938000" />
-      <workItem from="1596357589120" duration="18861000" />
+      <workItem from="1596357589120" duration="22680000" />
+      <workItem from="1596380899216" duration="9005000" />
     </task>
     <task id="LOCAL-00001" summary="invoice project">
       <created>1596131312331</created>
@@ -189,7 +195,14 @@
       <option name="project" value="LOCAL" />
       <updated>1596131312331</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="invoice project">
+      <created>1596377014460</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1596377014460</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -204,10 +217,10 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2637" y="345" width="504" height="387" key="#com.intellij.fileTypes.FileTypeChooser/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1596121108842" />
-    <state x="2671" y="258" width="408" height="562" key="#com.intellij.ide.util.MemberChooser" timestamp="1596361146836">
+    <state x="2671" y="258" width="408" height="562" key="#com.intellij.ide.util.MemberChooser" timestamp="1596386460117">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="2671" y="258" width="408" height="562" key="#com.intellij.ide.util.MemberChooser/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1596361146836" />
+    <state x="2671" y="258" width="408" height="562" key="#com.intellij.ide.util.MemberChooser/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1596386460117" />
     <state x="2613" y="306" width="514" height="466" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1595958993656">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
@@ -216,18 +229,18 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2613" y="289" width="524" height="499" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1596185053685" />
-    <state x="2613" y="297" width="524" height="484" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1596376029348">
+    <state x="2613" y="297" width="524" height="484" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1596389471059">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="2613" y="297" width="524" height="484" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1596376029348" />
-    <state x="2498" y="123" width="754" height="832" key="CommitChangelistDialog2" timestamp="1596131311275">
+    <state x="2613" y="297" width="524" height="484" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1596389471059" />
+    <state x="2498" y="123" width="754" height="832" key="CommitChangelistDialog2" timestamp="1596377014239">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="2498" y="123" width="754" height="832" key="CommitChangelistDialog2/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1596131311275" />
-    <state x="2663" y="297" width="424" height="484" key="FileChooserDialogImpl" timestamp="1595934011785">
+    <state x="2498" y="123" width="754" height="832" key="CommitChangelistDialog2/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1596377014239" />
+    <state x="2663" y="297" width="424" height="484" key="FileChooserDialogImpl" timestamp="1596388599076">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="2663" y="297" width="424" height="484" key="FileChooserDialogImpl/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1595934011785" />
+    <state x="2663" y="297" width="424" height="484" key="FileChooserDialogImpl/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1596388599076" />
     <state width="207" height="456" key="HiddenNamespacesPopup" timestamp="1595943926974">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
@@ -236,18 +249,18 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2463" y="277" width="824" height="523" key="IDE.errors.dialog/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1595964178619" />
-    <state x="2597" y="269" width="567" height="540" key="NewPhpClassDialog" timestamp="1596185322541">
+    <state x="2597" y="269" width="567" height="540" key="NewPhpClassDialog" timestamp="1596378208648">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="2597" y="269" width="567" height="540" key="NewPhpClassDialog/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1596185322541" />
+    <state x="2597" y="269" width="567" height="540" key="NewPhpClassDialog/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1596378208648" />
     <state x="2391" y="174" key="SettingsEditor" timestamp="1595949972803">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2391" y="174" key="SettingsEditor/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1595949972803" />
-    <state x="603" y="295" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1596193052124">
-      <screen x="67" y="27" width="1853" height="1053" />
+    <state x="2475" y="275" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1596377019077">
+      <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="2475" y="275" width="800" height="528" key="Vcs.Push.Dialog.v2/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1596131486061" />
+    <state x="2475" y="275" width="800" height="528" key="Vcs.Push.Dialog.v2/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1596377019077" />
     <state x="603" y="295" key="Vcs.Push.Dialog.v2/67.27.1853.1053@67.27.1853.1053" timestamp="1596193052124" />
     <state x="2655" y="276" width="429" height="525" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog" timestamp="1596131064726">
       <screen x="1920" y="0" width="1920" height="1080" />

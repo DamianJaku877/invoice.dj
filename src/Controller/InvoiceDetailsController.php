@@ -3,7 +3,6 @@
 
 namespace App\Controller;
 
-
 use App\Entity\Invoice;
 use App\Entity\InvoiceDetails;
 use App\Form\AddProductType;
@@ -11,7 +10,6 @@ use App\Service\PriceCounterService;
 use App\Service\PriceNettoCounter;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response as ResponseAlias;
 use Symfony\Component\Routing\Annotation\Route;
@@ -25,9 +23,10 @@ class InvoiceDetailsController extends AbstractController
      * @Route("{id}/add-product/", name="product_invoice_add")
      * @param Request $request
      * @param EntityManagerInterface $entityManager
+     * @param PriceCounterService $priceNettoCounter
      * @return ResponseAlias
      */
-    public function addAction(Request $request, EntityManagerInterface $entityManager, PriceCounterService $priceNettoCounter){
+    public function addAction(Request $request, Invoice $invoice, EntityManagerInterface $entityManager, PriceCounterService $priceNettoCounter){
 
         $invoiceId = $request->get('id');
         $invoiceDetails = new InvoiceDetails($invoiceId);
@@ -54,21 +53,7 @@ class InvoiceDetailsController extends AbstractController
         }
 
         return $this->render('invoiceDetails/product_invoice_add.html.twig',[
-            "productForm" => $productForm->createView()
+            "productForm" => $productForm->createView(),
         ]);
-    }
-
-    /**
-     * @Route("/{id}/delete/", name="details_delete")
-     * @param Invoice $invoice
-     * @param EntityManagerInterface $entityManager
-     * @return \Symfony\Component\HttpFoundation\RedirectResponse
-     */
-    public function deleteAction(Invoice $invoice, InvoiceDetails $invoiceDetails, EntityManagerInterface $entityManager){
-
-        $entityManager->remove($invoiceDetails);
-        $entityManager->flush();
-
-        return $this->redirectToRoute('invoice_list');
     }
 }

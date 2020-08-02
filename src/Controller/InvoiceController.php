@@ -23,7 +23,7 @@ class InvoiceController extends AbstractController
     {
         $invoiceList = $this->getDoctrine()->getManager()->getRepository("App:Invoice")->findAll();
 
-        return $this->render('Invoice/invoiceList.html.twig',[
+        return $this->render('Invoice/invoiceList.html.twig', [
             'invoice_list' => $invoiceList
         ]);
     }
@@ -31,14 +31,17 @@ class InvoiceController extends AbstractController
     /**
      * @Route("/{id}", name="details_invoice")
      * @param $id
+     * @param EntityManagerInterface $entityManager
+     * @return ResponseAlias
      */
-    public function detailsAction($id, EntityManagerInterface $entityManager){
+    public function detailsAction($id, EntityManagerInterface $entityManager)
+    {
 
-        $detailsInvoice = $this->getDoctrine()->getManager()->getRepository('App:InvoiceDetails')->findBy(['InvoiceId'=>$id]);
+        $detailsInvoice = $this->getDoctrine()->getManager()->getRepository('App:InvoiceDetails')->findBy(['InvoiceId' => $id]);
         $sumNettoPrice = $entityManager->getRepository(InvoiceDetails::class)->getTotalPrice($id);
         $sumBruttoPrice = ($sumNettoPrice * 0.23) + $sumNettoPrice;
 
-        return $this->render('Invoice/details.html.twig',[
+        return $this->render('Invoice/details.html.twig', [
             "detailsInvoices" => $detailsInvoice,
             "invoiceId" => $entityManager->getRepository(Invoice::class)->find($id),
             "sumNettoPrice" => $sumNettoPrice,
@@ -46,13 +49,15 @@ class InvoiceController extends AbstractController
         ]);
     }
 
+
     /**
      * @Route("/invoice/add", name="invoice_add")
      * @param Request $request
      * @param EntityManagerInterface $entityManager
      * @return ResponseAlias
      */
-    public function addAction(Request $request, EntityManagerInterface $entityManager){
+    public function addAction(Request $request, EntityManagerInterface $entityManager)
+    {
 
         $dateToDay = new \DateTime();
         $dateToDay = $dateToDay->format('Y-m-d');
@@ -65,10 +70,10 @@ class InvoiceController extends AbstractController
 
         $formInvoice = $this->createForm(InvoiceType::class, $invoice);
 
-        if ($request->isMethod("post")){
+        if ($request->isMethod("post")) {
 
             $formInvoice->handleRequest($request);
-            $invoice->setNumberInvoice( "FV/". $maxId . "/" . $dateToDaySplit[0] . "/" . $dateToDaySplit[1] . "/" . $dateToDaySplit[2]);
+            $invoice->setNumberInvoice("FV/" . $maxId . "/" . $dateToDaySplit[0] . "/" . $dateToDaySplit[1] . "/" . $dateToDaySplit[2]);
             $invoice->setOrderAt(new \DateTime($dateToDay));
             $invoice->setImplementationAt(new \DateTime($implementationDate));
             $invoice->setDeleted(0);
@@ -78,7 +83,7 @@ class InvoiceController extends AbstractController
             return $this->redirectToRoute('invoice_list');
         }
 
-        return $this->render('Invoice/add.html.twig',[
+        return $this->render('Invoice/add.html.twig', [
             'formInvoice' => $formInvoice->createView()
         ]);
     }
@@ -97,11 +102,11 @@ class InvoiceController extends AbstractController
         $formEditInvoice = $this->createForm(InvoiceType::class, $id[0]);
 
         if ($request->isMethod('post')) {
-                $formEditInvoice->handleRequest($request);
-                $entityManager->persist($invoice);
-                $entityManager->flush();
+            $formEditInvoice->handleRequest($request);
+            $entityManager->persist($invoice);
+            $entityManager->flush();
 
-                $this->addFlash("message", "Edit Success!!");
+            $this->addFlash("message", "Edit Success!!");
 
         }
 
@@ -114,7 +119,8 @@ class InvoiceController extends AbstractController
      * @param EntityManagerInterface $entityManager
      * @return \Symfony\Component\HttpFoundation\RedirectResponse
      */
-    public function deleteAction(Invoice $invoice, EntityManagerInterface $entityManager){
+    public function deleteAction(Invoice $invoice, EntityManagerInterface $entityManager)
+    {
 
         $invoice->setDeleted(1);
         $entityManager->persist($invoice);

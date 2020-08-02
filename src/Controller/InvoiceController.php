@@ -7,7 +7,6 @@ namespace App\Controller;
 use App\Entity\Invoice;
 use App\Entity\InvoiceDetails;
 use App\Form\InvoiceType;
-use App\Repository\InvoiceRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -32,14 +31,23 @@ class InvoiceController extends AbstractController
      * @Route("/{id}", name="details_invoice")
      * @param $id
      * @param EntityManagerInterface $entityManager
+     * @param Invoice $invoice
      * @return ResponseAlias
      */
-    public function detailsAction($id, EntityManagerInterface $entityManager)
+    public function detailsAction($id, EntityManagerInterface $entityManager, Invoice $invoice)
     {
 
         $detailsInvoice = $this->getDoctrine()->getManager()->getRepository('App:InvoiceDetails')->findBy(['InvoiceId' => $id]);
         $sumNettoPrice = $entityManager->getRepository(InvoiceDetails::class)->getTotalPrice($id);
         $sumBruttoPrice = ($sumNettoPrice * 0.23) + $sumNettoPrice;
+        $taxValue = $sumNettoPrice * 0.23;
+
+        $invoice->setSumNetto($sumNettoPrice);
+        $invoice->setSumBrutto($sumBruttoPrice);
+        $invoice->setTaxValue($taxValue);
+
+        $entityManager->persist($invoice);
+        $entityManager->flush();
 
         return $this->render('Invoice/details.html.twig', [
             "detailsInvoices" => $detailsInvoice,

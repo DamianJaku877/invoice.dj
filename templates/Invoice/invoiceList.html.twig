@@ -1,8 +1,8 @@
 {% extends 'base.html.twig' %}
  {% block stylesheets %}
-    <style>
+     <style>
 
-    </style>
+     </style>
  {% endblock %}
 {% block body %}
     <h1>Invoice List: </h1>
@@ -26,29 +26,37 @@
         <tbody>
         {% for invoices in invoice_list %}
             {% if invoices.deleted != 1 %}
-            <tr>
-                <td><a href="{{ url('details_invoice', {"id":invoices.id}) }}"
-                       style="color: blue">{{ invoices.numberInvoice }}</a></td>
-                <td>{{ invoices.name }}</td>
-                <td>{{ invoices.surname }}</td>
-                <td>{{ invoices.companyName }}</td>
-                <td>{{ invoices.address }}</td>
-                <td>{{ invoices.nip }}</td>
-                <td>{{ invoices.orderAt | date('Y-m-d') }}</td>
-                <td>{{ invoices.implementationAt | date('Y-m-d') }}</td>
-                <td>{{ invoices.sumNetto |round(2, 'floor')}}</td>
-                <td>{{ invoices.sumBrutto |round(2, 'floor')}}</td>
-                <td>{{ invoices.taxValue |round(2, 'floor')}}</td>
-                <td>
-                    <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
-                        <a  class="btn btn-secondary btn-danger"  type="button"
-                           href="{{ path('invoice_delete', {"id":invoices.id}) }}" role="button">Delete</a>
-                        <a class="btn btn-secondary btn-warning" role="button" href="{{ path('invoice_edit', {'id': invoices.id}) }}" style="color: white;">Edit</a>
-                        <a class="btn btn-secondary btn-info" role="button" href="{{ path('product_invoice_add', {'id': invoices.id}) }}" style="color: white">Add Product</a>
-                        <a class="btn btn-secondary btn-success" role="button" href="">Print</a>
-                    </div>
-                </td>
-            </tr>
+                <tr>
+                    <td><a href="{{ url('details_invoice', {"id":invoices.id}) }}"
+                           style="color: blue">{{ invoices.numberInvoice }}</a></td>
+                    <td>{{ invoices.name }}</td>
+                    <td>{{ invoices.surname }}</td>
+                    <td>{{ invoices.companyName }}</td>
+                    <td>{{ invoices.address }}</td>
+                    <td>{{ invoices.nip }}</td>
+                    <td>{{ invoices.orderAt | date('Y-m-d') }}</td>
+                    <td>{{ invoices.implementationAt | date('Y-m-d') }}</td>
+                    {% if invoices.sumNetto > 0 %}
+                        <td>{{ invoices.sumNetto |round(2, 'floor') }}</td>
+                        <td>{{ invoices.sumBrutto |round(2, 'floor') }}</td>
+                        <td>{{ invoices.taxValue |round(2, 'floor') }}</td>
+                        {% else %}
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                    {% endif %}
+                    <td>
+                        <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
+                            <a class="btn btn-secondary btn-danger" type="button"
+                               href="{{ path('invoice_delete', {"id":invoices.id}) }}" role="button">Delete</a>
+                            <a class="btn btn-secondary btn-warning" role="button"
+                               href="{{ path('invoice_edit', {'id': invoices.id}) }}" style="color: white;">Edit</a>
+                            <a class="btn btn-secondary btn-info" role="button"
+                               href="{{ path('product_invoice_add', {'id': invoices.id}) }}" style="color: white">Add
+                                Product</a>
+                        </div>
+                    </td>
+                </tr>
             {% endif %}
         {% else %}
             <div class="alert alert-danger" role="alert" style="text-align: center">

@@ -2,16 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f4f5959b-fe85-4862-85a1-04031378e043" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/invoice.io.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/invoice.io.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/InvoiceController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/InvoiceController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/InvoiceDetailsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/InvoiceDetailsController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Repository/InvoiceDetailsRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/InvoiceDetailsRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Invoice/invoiceList.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Invoice/invoiceList.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -186,7 +180,7 @@
       <workItem from="1596182980894" duration="3753000" />
       <workItem from="1596191133128" duration="1938000" />
       <workItem from="1596357589120" duration="22680000" />
-      <workItem from="1596380899216" duration="9005000" />
+      <workItem from="1596380899216" duration="15764000" />
     </task>
     <task id="LOCAL-00001" summary="invoice project">
       <created>1596131312331</created>
@@ -202,7 +196,14 @@
       <option name="project" value="LOCAL" />
       <updated>1596377014460</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="invoice project">
+      <created>1596389931428</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1596389931428</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -217,10 +218,10 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2637" y="345" width="504" height="387" key="#com.intellij.fileTypes.FileTypeChooser/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1596121108842" />
-    <state x="2671" y="258" width="408" height="562" key="#com.intellij.ide.util.MemberChooser" timestamp="1596386460117">
+    <state x="2671" y="258" width="408" height="562" key="#com.intellij.ide.util.MemberChooser" timestamp="1596395784228">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="2671" y="258" width="408" height="562" key="#com.intellij.ide.util.MemberChooser/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1596386460117" />
+    <state x="2671" y="258" width="408" height="562" key="#com.intellij.ide.util.MemberChooser/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1596395784228" />
     <state x="2613" y="306" width="514" height="466" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1595958993656">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
@@ -233,10 +234,10 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2613" y="297" width="524" height="484" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1596389471059" />
-    <state x="2498" y="123" width="754" height="832" key="CommitChangelistDialog2" timestamp="1596377014239">
+    <state x="2498" y="123" width="754" height="832" key="CommitChangelistDialog2" timestamp="1596389931276">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="2498" y="123" width="754" height="832" key="CommitChangelistDialog2/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1596377014239" />
+    <state x="2498" y="123" width="754" height="832" key="CommitChangelistDialog2/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1596389931276" />
     <state x="2663" y="297" width="424" height="484" key="FileChooserDialogImpl" timestamp="1596388599076">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
@@ -257,10 +258,10 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2391" y="174" key="SettingsEditor/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1595949972803" />
-    <state x="2475" y="275" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1596377019077">
+    <state x="2475" y="275" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1596389936628">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="2475" y="275" width="800" height="528" key="Vcs.Push.Dialog.v2/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1596377019077" />
+    <state x="2475" y="275" width="800" height="528" key="Vcs.Push.Dialog.v2/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1596389936628" />
     <state x="603" y="295" key="Vcs.Push.Dialog.v2/67.27.1853.1053@67.27.1853.1053" timestamp="1596193052124" />
     <state x="2655" y="276" width="429" height="525" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog" timestamp="1596131064726">
       <screen x="1920" y="0" width="1920" height="1080" />
@@ -270,17 +271,17 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2655" y="256" width="439" height="565" key="git4idea.branch.GitSmartOperationDialog/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1596183412752" />
-    <state x="2659" y="316" width="432" height="446" key="refactoring.ChangeSignatureDialog" timestamp="1596368298620">
+    <state x="2659" y="316" width="432" height="446" key="refactoring.ChangeSignatureDialog" timestamp="1596392948129">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="2659" y="316" width="432" height="446" key="refactoring.ChangeSignatureDialog/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1596368298620" />
+    <state x="2659" y="316" width="432" height="446" key="refactoring.ChangeSignatureDialog/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1596392948129" />
     <state x="2544" y="246" key="run.anything.popup" timestamp="1596108426209">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2544" y="246" key="run.anything.popup/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1596108426209" />
-    <state x="2543" y="237" width="672" height="678" key="search.everywhere.popup" timestamp="1596359490195">
+    <state x="2543" y="237" width="672" height="678" key="search.everywhere.popup" timestamp="1596395520935">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="2543" y="237" width="672" height="678" key="search.everywhere.popup/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1596359490195" />
+    <state x="2543" y="237" width="672" height="678" key="search.everywhere.popup/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1596395520935" />
   </component>
 </project>

@@ -2,6 +2,7 @@
 
 namespace App\Repository;
 
+use App\Entity\Invoice;
 use App\Entity\InvoiceDetails;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
@@ -27,6 +28,7 @@ class InvoiceDetailsRepository extends ServiceEntityRepository
             ->getQuery()
             ->getSingleScalarResult();
     }
+
     // /**
     //  * @return InvoiceDetails[] Returns an array of InvoiceDetails objects
     //  */

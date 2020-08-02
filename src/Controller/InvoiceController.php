@@ -5,6 +5,7 @@ namespace App\Controller;
 
 
 use App\Entity\Invoice;
+use App\Entity\InvoiceDetails;
 use App\Form\InvoiceType;
 use App\Repository\InvoiceRepository;
 use Doctrine\ORM\EntityManagerInterface;
@@ -34,10 +35,14 @@ class InvoiceController extends AbstractController
     public function detailsAction($id, EntityManagerInterface $entityManager){
 
         $detailsInvoice = $this->getDoctrine()->getManager()->getRepository('App:InvoiceDetails')->findBy(['InvoiceId'=>$id]);
-        $entityManager->getRepository(Invoice::class)->find($id);
+        $sumNettoPrice = $entityManager->getRepository(InvoiceDetails::class)->getTotalPrice($id);
+        $sumBruttoPrice = ($sumNettoPrice * 0.23) + $sumNettoPrice;
+
         return $this->render('Invoice/details.html.twig',[
             "detailsInvoices" => $detailsInvoice,
-            "invoiceId" => $entityManager->getRepository(Invoice::class)->find($id)
+            "invoiceId" => $entityManager->getRepository(Invoice::class)->find($id),
+            "sumNettoPrice" => $sumNettoPrice,
+            "sumBruttoPrice" => $sumBruttoPrice
         ]);
     }
 

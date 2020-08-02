@@ -2,6 +2,7 @@
 
 namespace App\Repository;
 
+use App\Entity\Invoice;
 use App\Entity\InvoiceDetails;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
@@ -19,6 +20,14 @@ class InvoiceDetailsRepository extends ServiceEntityRepository
         parent::__construct($registry, InvoiceDetails::class);
     }
 
+    public function getTotalPrice($id){
+        return $this->createQueryBuilder('invoice_details')
+            ->andWhere('invoice_details.InvoiceId = :id')
+            ->setParameter('id', $id)
+            ->select('SUM(invoice_details.priceNetto)')
+            ->getQuery()
+            ->getSingleScalarResult();
+    }
     // /**
     //  * @return InvoiceDetails[] Returns an array of InvoiceDetails objects
     //  */

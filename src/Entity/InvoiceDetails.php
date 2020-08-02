@@ -24,12 +24,12 @@ class InvoiceDetails
     private $nameProduct;
 
     /**
-     * @ORM\Column(type="decimal", precision=20, scale=2, length=20, nullable=true)
+     * @ORM\Column(type="float", precision=20, scale=2, length=20, nullable=true)
      */
     private $priceNetto;
 
     /**
-     * @ORM\Column(type="decimal", precision=20, scale=2, length=20, nullable=true)
+     * @ORM\Column(type="float", precision=20, scale=2, length=20, nullable=true)
      */
     private $priceBrutto;
 
@@ -44,7 +44,7 @@ class InvoiceDetails
     private $quantity;
 
     /**
-     * @ORM\Column(type="decimal", precision=20, scale=2, length=20, nullable=true)
+     * @ORM\Column(type="float", precision=20, scale=2, length=20, nullable=true)
      */
     private $unitPrice;
 
@@ -55,14 +55,14 @@ class InvoiceDetails
      */
     private $InvoiceId;
 
-//    /**
-//     * InvoiceDetails constructor.
-//     * @param $InvoiceId
-//     */
-//    public function __construct($InvoiceId)
-//    {
-//        $this->InvoiceId = new ArrayCollection();
-//    }
+    /**
+     * InvoiceDetails constructor.
+     * @param $InvoiceId
+     */
+    public function __construct($InvoiceId)
+    {
+        $this->InvoiceId = new ArrayCollection();
+    }
 
 
     public function getId(): ?int
@@ -149,36 +149,19 @@ class InvoiceDetails
     }
 
     /**
-     * @return mixed
+     * @return ArrayCollection
      */
-    public function getInvoiceId()
+    public function getInvoiceId(): ArrayCollection
     {
         return $this->InvoiceId;
     }
 
     /**
-     * @param mixed $InvoiceId
+     * @param ArrayCollection $InvoiceId
      */
     public function setInvoiceId($InvoiceId): void
     {
         $this->InvoiceId = $InvoiceId;
     }
-
-//    /**
-//     * @return ArrayCollection
-//     */
-//    public function getInvoiceId(): ArrayCollection
-//    {
-//        return $this->InvoiceId;
-//    }
-//
-//    /**
-//     * @param ArrayCollection $InvoiceId
-//     */
-//    public function setInvoiceId(ArrayCollection $InvoiceId): void
-//    {
-//        $this->InvoiceId = $InvoiceId;
-//    }
-
 
 }

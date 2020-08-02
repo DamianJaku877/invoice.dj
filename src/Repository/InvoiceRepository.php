@@ -19,7 +19,8 @@ class InvoiceRepository extends ServiceEntityRepository
         parent::__construct($registry, Invoice::class);
     }
 
-    public function findMaxValueId(){
+    public function findMaxValueId()
+    {
 
         $qb = $this->createQueryBuilder('i');
         $qb->select('i, MAX(i.id) as idMax');

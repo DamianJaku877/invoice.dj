@@ -36,9 +36,9 @@
                 <td>{{ invoices.nip }}</td>
                 <td>{{ invoices.orderAt | date('Y-m-d') }}</td>
                 <td>{{ invoices.implementationAt | date('Y-m-d') }}</td>
-                <td>{{ invoices.sumNetto }}</td>
-                <td>{{ invoices.sumBrutto }}</td>
-                <td>{{ invoices.taxValue }}</td>
+                <td>{{ invoices.sumNetto |round(2, 'floor')}}</td>
+                <td>{{ invoices.sumBrutto |round(2, 'floor')}}</td>
+                <td>{{ invoices.taxValue |round(2, 'floor')}}</td>
                 <td>
                     <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
                         <a  class="btn btn-secondary btn-danger"  type="button"

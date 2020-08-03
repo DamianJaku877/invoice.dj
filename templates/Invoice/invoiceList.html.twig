@@ -27,8 +27,11 @@
         {% for invoices in invoice_list %}
             {% if invoices.deleted != 1 %}
                 <tr>
-                    <td><a href="{{ url('details_invoice', {"id":invoices.id}) }}"
-                           style="color: blue">{{ invoices.numberInvoice }}</a></td>
+                    {% if invoices.sumNetto > 0 %}
+                        <td><a href="{{ url('details_invoice', {"id":invoices.id}) }}" style="color: blue">{{ invoices.numberInvoice }}</a></td>
+                    {% else %}
+                        <td>{{ invoices.numberInvoice }}</td>
+                    {% endif %}
                     <td>{{ invoices.name }}</td>
                     <td>{{ invoices.surname }}</td>
                     <td>{{ invoices.companyName }}</td>

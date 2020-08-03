@@ -1,8 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="f4f5959b-fe85-4862-85a1-04031378e043" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/templates/Invoice/pdf.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/invoice.io.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/invoice.io.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/symfony2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/symfony2.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/InvoiceController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/InvoiceController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Invoice/invoiceList.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Invoice/invoiceList.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -125,6 +137,11 @@
       <path value="$PROJECT_DIR$/vendor/knplabs/knp-snappy" />
       <path value="$PROJECT_DIR$/vendor/knplabs/knp-components" />
       <path value="$PROJECT_DIR$/vendor/knplabs/knp-paginator-bundle" />
+      <path value="$PROJECT_DIR$/vendor/profburial/wkhtmltopdf-binaries-osx" />
+      <path value="$PROJECT_DIR$/vendor/dompdf/dompdf" />
+      <path value="$PROJECT_DIR$/vendor/sabberworm/php-css-parser" />
+      <path value="$PROJECT_DIR$/vendor/phenx/php-font-lib" />
+      <path value="$PROJECT_DIR$/vendor/phenx/php-svg-lib" />
     </include_path>
   </component>
   <component name="ProjectId" id="1fJFswRr2WUSrgE44DnzfBiK5C9" />
@@ -138,7 +155,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Downloads" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.stylelint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -153,12 +170,12 @@
     <property name="settings.editor.selected.configurable" value="copyright" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public/assets/bootstrap" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/public/assets/fontawesome" />
       <recent name="$PROJECT_DIR$/public/assets" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/public/assets/bootstrap" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -179,6 +196,7 @@
       <workItem from="1596357589120" duration="22680000" />
       <workItem from="1596380899216" duration="16101000" />
       <workItem from="1596434833165" duration="643000" />
+      <workItem from="1596437139257" duration="12764000" />
     </task>
     <task id="LOCAL-00001" summary="invoice project">
       <created>1596131312331</created>
@@ -208,7 +226,14 @@
       <option name="project" value="LOCAL" />
       <updated>1596396859474</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="invoice project">
+      <created>1596437162305</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1596437162305</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -223,10 +248,10 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2637" y="345" width="504" height="387" key="#com.intellij.fileTypes.FileTypeChooser/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1596121108842" />
-    <state x="2671" y="258" width="408" height="562" key="#com.intellij.ide.util.MemberChooser" timestamp="1596395784228">
+    <state x="2671" y="258" width="408" height="562" key="#com.intellij.ide.util.MemberChooser" timestamp="1596440988725">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="2671" y="258" width="408" height="562" key="#com.intellij.ide.util.MemberChooser/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1596395784228" />
+    <state x="2671" y="258" width="408" height="562" key="#com.intellij.ide.util.MemberChooser/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1596440988725" />
     <state x="2613" y="306" width="514" height="466" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1595958993656">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
@@ -235,14 +260,18 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2613" y="289" width="524" height="499" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1596185053685" />
-    <state x="2613" y="297" width="524" height="484" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1596389471059">
+    <state x="2613" y="297" width="524" height="484" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1596447123541">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="2613" y="297" width="524" height="484" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1596389471059" />
-    <state x="2498" y="123" width="754" height="832" key="CommitChangelistDialog2" timestamp="1596396859408">
+    <state x="2613" y="297" width="524" height="484" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1596447123541" />
+    <state x="2663" y="468" width="424" height="141" key="#com.jetbrains.php.lang.intentions.PhpImportClassDialog#" timestamp="1596447168334">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="2498" y="123" width="754" height="832" key="CommitChangelistDialog2/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1596396859408" />
+    <state x="2663" y="468" width="424" height="141" key="#com.jetbrains.php.lang.intentions.PhpImportClassDialog#/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1596447168334" />
+    <state x="2498" y="123" width="754" height="832" key="CommitChangelistDialog2" timestamp="1596437162097">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2498" y="123" width="754" height="832" key="CommitChangelistDialog2/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1596437162097" />
     <state x="2663" y="297" width="424" height="484" key="FileChooserDialogImpl" timestamp="1596435484580">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
@@ -255,18 +284,18 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2463" y="277" width="824" height="523" key="IDE.errors.dialog/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1595964178619" />
-    <state x="2597" y="269" width="567" height="540" key="NewPhpClassDialog" timestamp="1596378208648">
+    <state x="2597" y="269" width="567" height="540" key="NewPhpClassDialog" timestamp="1596440969734">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="2597" y="269" width="567" height="540" key="NewPhpClassDialog/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1596378208648" />
+    <state x="2597" y="269" width="567" height="540" key="NewPhpClassDialog/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1596440969734" />
     <state x="2391" y="174" key="SettingsEditor" timestamp="1595949972803">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2391" y="174" key="SettingsEditor/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1595949972803" />
-    <state x="2475" y="275" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1596396868775">
+    <state x="2475" y="275" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1596437168122">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="2475" y="275" width="800" height="528" key="Vcs.Push.Dialog.v2/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1596396868775" />
+    <state x="2475" y="275" width="800" height="528" key="Vcs.Push.Dialog.v2/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1596437168122" />
     <state x="603" y="295" key="Vcs.Push.Dialog.v2/67.27.1853.1053@67.27.1853.1053" timestamp="1596193052124" />
     <state x="2655" y="276" width="429" height="525" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog" timestamp="1596131064726">
       <screen x="1920" y="0" width="1920" height="1080" />
@@ -284,9 +313,9 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2544" y="246" key="run.anything.popup/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1596108426209" />
-    <state x="2543" y="237" width="672" height="678" key="search.everywhere.popup" timestamp="1596395520935">
+    <state x="2543" y="237" width="672" height="678" key="search.everywhere.popup" timestamp="1596440528002">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="2543" y="237" width="672" height="678" key="search.everywhere.popup/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1596395520935" />
+    <state x="2543" y="237" width="672" height="678" key="search.everywhere.popup/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1596440528002" />
   </component>
 </project>

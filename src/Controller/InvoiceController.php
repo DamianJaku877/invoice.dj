@@ -7,11 +7,16 @@ namespace App\Controller;
 use App\Entity\Invoice;
 use App\Entity\InvoiceDetails;
 use App\Form\InvoiceType;
+use App\Repository\InvoiceDetailsRepository;
+use App\Repository\InvoiceRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Response as ResponseAlias;
 use Symfony\Component\Routing\Annotation\Route;
+use Dompdf\Dompdf;
+use Dompdf\Options;
 
 class InvoiceController extends AbstractController
 {
@@ -57,7 +62,48 @@ class InvoiceController extends AbstractController
         ]);
     }
 
+    /**
+     * @Route ("/invoice/{id}/pdf", name="invoice_pdf")
+     * @param Invoice $invoice
+     * @param InvoiceDetailsRepository $invoiceDetailsRepository
+     * @param InvoiceRepository $invoiceRepository
+     * @return \App\Controller\Response
+     */
+    public function printPdf(Invoice  $invoice, InvoiceDetailsRepository $invoiceDetailsRepository, InvoiceRepository $invoiceRepository){
 
+
+        // Configure Dompdf according to your needs
+        $pdfOptions = new Options();
+        $pdfOptions->set('defaultFont', 'Arial');
+
+        // Instantiate Dompdf with our options
+        $dompdf = new Dompdf($pdfOptions);
+        $invoicePdfId = $invoice->getId();
+        $invoicePdf = $invoiceRepository->findBy(['id' => $invoicePdfId]);
+        $invoiceDetailsPdf = $invoiceDetailsRepository->findBy(['InvoiceId' => $invoicePdfId] );
+
+//        dump($invoicePdf,$invoiceDetailsPdf);exit;
+        // Retrieve the HTML generated in our twig file
+
+        $html = $this->renderView('Invoice/pdf.html.twig', [
+            'invoicepdf' =>$invoicePdf,
+            'invoiceDetailsPdf' => $invoiceDetailsPdf
+        ]);
+
+        // Load HTML to Dompdf
+        $dompdf->loadHtml($html);
+
+        // (Optional) Setup the paper size and orientation 'portrait' or 'portrait'
+        $dompdf->setPaper('A4', 'portrait');
+
+        // Render the HTML as PDF
+        $dompdf->render();
+
+        $dompdf->stream('mypdf.pdf', [
+            'Attachment' => true
+        ]);
+
+    }
     /**
      * @Route("/invoice/add", name="invoice_add")
      * @param Request $request
@@ -136,6 +182,5 @@ class InvoiceController extends AbstractController
 
         return $this->redirectToRoute('invoice_list');
     }
-
 
 }

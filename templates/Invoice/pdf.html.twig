@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+</head>
+
+<body>
+<div class="container">
+    <div class="row">
+        <div>
+            {% for invoicepdf in invoicepdf %}
+            <h1 style="text-align: center">Invoice number: {{ invoicepdf.numberInvoice }}</h1>
+            <div>
+            <p>Order Date: {{ invoicepdf.orderAt | date('Y-m-d')}}</p>
+            <p>Payment Date: {{ invoicepdf.implementationAt | date('Y-m-d')}}</p>
+                <h4>Customer Invoice: </h4>
+                <p>Company Name: {{ invoicepdf.companyName }}</p>
+                <p>NIP: {{ invoicepdf.nip }}</p>
+                <p>Address: {{ invoicepdf.address }}</p>
+            </div>
+                <hr>
+            <table>
+                <thead>
+                <tr>
+                    <th scope="col">Product Name</th>
+                    <th scope="col">Quantity</th>
+                    <th scope="col">Netto Price</th>
+                    <th scope="col">Brutto Price</th>
+                    <th scope="col">VAT</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for invoiceDetailsPdf in invoiceDetailsPdf %}
+                    <tr>
+                        <td>{{ invoiceDetailsPdf.nameProduct }}</td>
+                        <td>{{ invoiceDetailsPdf.quantity }}</td>
+                        <td>{{ invoiceDetailsPdf.priceNetto }}</td>
+                        <td>{{ invoiceDetailsPdf.priceBrutto }}</td>
+                        <td>{{ invoiceDetailsPdf.vat }}%</td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+                <hr>
+                <table>
+                    <thead>
+                    <tr style="font-size: large">
+                        <td><b></b></td>
+                        <td><b>Netto: </b></td>
+                        <td><b>Brutto: </b></td>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td><b>Total: </b></td>
+                        <td><b>{{ invoicepdf.sumNetto |round(2, 'floor')}} PLN</b></td>
+                        <td><b>{{ invoicepdf.sumBrutto |round(2, 'floor')}} PLN</b></td>
+                    </tr>
+                    </tbody>
+                </table>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+</body>
+</html>

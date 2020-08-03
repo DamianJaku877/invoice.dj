@@ -57,6 +57,8 @@
                             <a class="btn btn-secondary btn-info" role="button"
                                href="{{ path('product_invoice_add', {'id': invoices.id}) }}" style="color: white">Add
                                 Product</a>
+                            <a class="btn btn-secondary btn-success" role="button"
+                               href="{{ path('invoice_pdf', {'id': invoices.id}) }}" style="color: white">Print</a>
                         </div>
                     </td>
                 </tr>
